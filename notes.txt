@@ -1,0 +1,15 @@
+// NODE:
+// - non-blocking
+// - V8 JavaScript Run-time
+// - Single-threaded server
+
+// Things you can build:
+// Websocket server for chats
+// File upload client
+// Ad server
+// Real-time data apps
+
+
+// blocking vs non-blocking:
+
+Js allows us to writ evented programming, single-threaded, non-blocking

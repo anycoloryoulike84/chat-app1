@@ -1,0 +1,145 @@
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Node</title>
+     <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+    
+    
+  </head>
+
+  <body>
+
+	<div class="jumbotron">
+	      <div class="container">
+	        <h1>Express Demo</h1>
+	      </div>
+	</div>
+
+
+    <div class="container">
+		<form id="chat_form" action="">
+		  Type Message:<br>
+		  <input type="text" name="conversation" id="chat_input" placeholder="enter message">
+		  <br>
+		  <input type="submit" value="submit">
+		</form> 
+    </div>
+
+	<div class="container">
+		<div class="row">
+			<h2 id="status"></h2>
+			<div>
+				<p>Chat here:</p>
+					<ul  id="client-message"> 
+					</ul>
+			</div>
+		</div>
+	</div>
+  </body>
+<script>
+
+
+
+ 
+var server = io.connect("http://localhost:8080");
+
+
+$("#chat_form").submit(function(e){
+	
+
+
+
+
+	var insertMessage = function(data) {	
+		var message = $("#chat_input").val();
+		server.emit("messages", message);
+		$("#client-message").append("<li>" + message + "</li>");
+		e.preventDefault();
+		 $("#chat_form")[0].reset();
+		}
+		insertMessage();
+});
+
+
+server.on("messages", function(data){
+	insertMessage(data);
+});
+ 
+server.on("connect", function(data) {
+	// $("#status").html("Connected to Chat App");
+	// nickname = prompt("Whats yerr name?");
+	// server.emit("join", nickname);
+	
+});
+
+
+
+
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>chattr</title>
+		<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+		<link rel="stylesheet" href="/app.css">
+	</head>
+	<body>
+		<h1>chattr</h1>
+
+		<ul id="chatters"></ul>
+		<div id="chat-console"></div>
+
+		<form id="chat-form">
+			<input type="text" name="chat-input" id="chat-input" placeholder="type your message here ..." autofocus autocomplete="off"><br>
+			<input type="submit" value="send"/>
+		</form>
+		
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="/app.js"></script>
+		
+	</body>
+</html>
+
+
+
+
+
