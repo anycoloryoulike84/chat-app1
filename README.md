@@ -19,9 +19,3 @@ $ npm start
 or
 
 Install via git clone (fork)
-
-
-
-;wq
-:wq
-
