@@ -21,6 +21,9 @@ $chatwidth: 40%;
 
 /*SASS STYLES*/
 
+#chat-console > span.connected {
+	font-style: italic;
+}
 
 .jumbotron { 
   background-color: $primarybase; 
