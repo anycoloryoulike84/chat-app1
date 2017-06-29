@@ -17,11 +17,17 @@ body {
   background-color: rgba(24, 29, 24, 0.8);
   color: rgba(255, 255, 255, 0.8); }
 
-/*REGULAR CSS STYLES, NO SASS*/
-/*REGULAR CSS STYLES, NO SASS*/
-/*REGULAR CSS STYLES, NO SASS*/
-/*REGULAR CSS STYLES, NO SASS*/
+#chat-console > span.connected {
+  color: rgba(100, 110, 100, 0.9);
+  font-variant: small-caps; }
 
+#chat-console > span.connected::after {
+  content: "..."; }
+
+/*REGULAR CSS STYLES, NO SASS*/
+/*REGULAR CSS STYLES, NO SASS*/
+/*REGULAR CSS STYLES, NO SASS*/
+/*REGULAR CSS STYLES, NO SASS*/
 #chatters {
   width: 100px;
   margin: 0 1em 0 2em;
