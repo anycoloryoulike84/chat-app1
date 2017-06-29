@@ -30,6 +30,7 @@
 		var new_message = document.createElement('span');
 		new_message.innerHTML = message + '<br/>';
 		chat_console.appendChild(new_message);
+		chat_console.scrollTop = chat_console.scrollHeight;
 	};
 
 	document.getElementById('chat-form').onsubmit = function(e) {
