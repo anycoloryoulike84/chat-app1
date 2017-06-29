@@ -22,8 +22,8 @@
 
 <!-- success ping -->
 
-		<audio class="my_audio" controls preload="none">
-		    <source src="public/success.wav" type="audio/wav">
+		<audio style="opacity:0" class="my_audio" controls preload="none">
+		    <source src="/public/success.wav" type="audio/wav">
 		</audio>
 
 			
@@ -39,10 +39,10 @@
 			// write methods for playing and stopping
 
 			function play_audio(task) {
-			      if(task == 'play'){
+			      if (task == 'play'){
 			           $(".my_audio").trigger('play');
 			      }
-			      
+
 			 }
 
 
