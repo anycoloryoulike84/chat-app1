@@ -1,8 +1,8 @@
-
-Nodde-chat app using socket-io, express
-
-
 # Node-chat app using socket-io, express
+
+## DEMO: 
+see demo on heroku [here](https://g-chat-app.herokuapp.com/)
+
 
 A simple node/express server.
 

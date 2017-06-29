@@ -39,12 +39,16 @@ body {
 
 
 #chat-console > span.connected {
-	color: rgba(100,110,100,.9);
+	color: rgba(173,255,47,.9);
 	font-variant: small-caps;
+	font-style: italic;
 }
 #chat-console > span.connected::after {
 	content: "..."
 }
+
+
+
 
 
 

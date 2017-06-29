@@ -18,8 +18,9 @@ body {
   color: rgba(255, 255, 255, 0.8); }
 
 #chat-console > span.connected {
-  color: rgba(100, 110, 100, 0.9);
-  font-variant: small-caps; }
+  color: rgba(173, 255, 47, 0.9);
+  font-variant: small-caps;
+  font-style: italic; }
 
 #chat-console > span.connected::after {
   content: "..."; }
