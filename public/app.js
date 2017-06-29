@@ -46,8 +46,13 @@
 
 	socket.on('connect', function(data) {
 		chat_console.innerHTML = '<span class="connected">connected to the chat socket</span><br/>';
-		nickname = prompt('what is your nickanme?');
-		socket.emit('join', nickname);
+		nickname = prompt('What is your Username?');
+		if (nickname == null )	{
+				nickname = prompt('Error! what is your Username?');
+			} else {
+				socket.emit('join', nickname);
+			}
+
 	});
 
 	socket.on('add chatter', insertChatter);
