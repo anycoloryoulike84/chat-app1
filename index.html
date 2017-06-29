@@ -16,14 +16,37 @@
 		<form id="chat-form">
 			<div class="form-group">
 				<input type="text" placeholder="Insert message"  class="form-control" name="chat-input" id="chat-input" placeholder="type your message here ..." autofocus autocomplete="off"><br>
-				<input type="submit"  class="form-control bg-primary" value="send"/>
+				<input type="submit" onclick="play_audio('play')"  class="form-control bg-primary" value="send"/>
 			</div>
 		</form>
+
+<!-- success ping -->
+
+		<audio class="my_audio" controls preload="none">
+		    <source src="public/success.wav" type="audio/wav">
+		</audio>
+
 			
 		<script src="/socket.io/socket.io.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="/app.js"></script>
 		
+
+
+		<script type="text/javascript">
+
+			$(".my_audio").trigger('load');
+			// write methods for playing and stopping
+
+			function play_audio(task) {
+			      if(task == 'play'){
+			           $(".my_audio").trigger('play');
+			      }
+			      
+			 }
+
+
+		</script>
 		
 		
 	</body>
