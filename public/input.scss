@@ -1,0 +1,129 @@
+/*Variables*/
+
+/*Mixins*/
+
+/*Color Palette*/
+$primarybase: rgba(200,210,200,.8); 
+$secondarybase: darken($primarybase, 70%);
+$tertiarybase: lighten($primarybase, 40%);
+
+/*Font Styles*/
+$primaryfamily: 'Roboto', sans-serif;
+/*$secondaryfamily:;*/
+
+/*Shadows*/
+$shadowdark: 1px 1px 5px #222;
+$shadowlight: 1px 1px 5px #ccc;
+
+/*Layouts*/
+$chatwidth: 40%;
+
+
+/*SASS STYLES*/
+
+
+.jumbotron { 
+  background-color: $primarybase; 
+  color: $secondarybase;
+  box-shadow: $shadowdark;
+  text-shadow:$shadowlight;
+}
+
+body { 	
+	font-family: $primaryfamily;
+	background-color: $secondarybase;
+	color: $tertiarybase;
+
+}
+
+
+
+
+
+
+
+
+
+
+/*REGULAR CSS STYLES, NO SASS*/
+/*REGULAR CSS STYLES, NO SASS*/
+/*REGULAR CSS STYLES, NO SASS*/
+/*REGULAR CSS STYLES, NO SASS*/
+
+
+#chatters { 
+	width: 100px; 
+	margin: 0 1em 0 0; 
+	float: left; 
+	list-style: none; 
+}
+
+#chatters, #chat-console { 
+	height: 300px; 
+	overflow: auto; 
+	padding: 1%;
+}
+
+#chat-console, #chatters, #chat-form input[type=text] { 
+	border: 1px solid #ccc; 
+}
+
+#chat-console, #chat-form { 
+	margin-right: 7%; }
+
+#chat-form { 
+	margin-top: 1em; 
+	text-align: right; 
+	clear: both; 
+}
+
+#chat-form input[type=text] { 
+	width: $chatwidth; 
+	font-size: 120%; 
+	padding: 1%; 
+}
+
+.connected { 
+	color: $tertiarybase;
+}
+
+/* http://hellohappy.org/css3-buttons/ */
+input[type=submit] { 
+	background-color: red; 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc)); 
+	background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc); 
+	background-image: -moz-linear-gradient(top, #eeeeee, #cccccc); 
+	background-image: -ms-linear-gradient(top, #eeeeee, #cccccc); 
+	background-image: -o-linear-gradient(top, #eeeeee, #cccccc); 
+	background-image: linear-gradient(top, #eeeeee, #cccccc); 
+	border: 1px solid #ccc; 
+	border-bottom: 1px solid #bbb; 
+	border-radius: 3px; 
+	color: #333; 
+	font-size: 100%; 
+	padding: 8px 0; text-align: center; 
+	text-shadow: $shadowlight;
+	width: 150px; 
+}
+
+input[type=submit]:hover { 
+	background-color: #dddddd; 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb)); 
+	background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb); 
+	background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb); 
+	background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb); 
+	background-image: -o-linear-gradient(top, #dddddd, #bbbbbb); 
+	background-image: linear-gradient(top, #dddddd, #bbbbbb); 
+	border: 1px solid #bbb; 
+	border-bottom: 1px solid #999; 
+	cursor: pointer; 
+	text-shadow: $shadowlight;
+}
+
+input[type=submit]:active { 
+	border: 1px solid #aaa; 
+	border-bottom: 1px solid #888; -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee; box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee; }
+
+
+
+

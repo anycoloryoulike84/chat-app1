@@ -13,6 +13,7 @@
     }
   ],
   "dependencies": {
+    "concurrently": "^3.5.0",
     "express": "^3.21.2",
     "nodemon": "^1.11.0",
     "redis": "^0.10.3",
@@ -23,10 +24,15 @@
     "url": " "
   },
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "concurrently \"nodemon app.js\" \"npm run watch-css\" ",
+    "build-css": "node-sass --include-path scss public/input.scss public/app.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\" "
   },
   "readme": "# Real Time Web With Node.js\n\nThis is the code for the [Real Time Web with Node.js](http://www.codeschool.com/courses/real-time-web-with-nodejs) demo app.\n\n## redis\n\nYou’ll need to make sure you have a redis server running in order to use the application see the [Redis Quick Start](http://redis.io/topics/quickstart) for information on installing redis.\n\n## Install\n\nThe fastest way to get __chattr__ up and running:\n\n * On Mac or Linux, make sure you have [nodejs][nodejs] and [npm][npm] installed\n\n```\ngit clone git@github.com:dan-nl/realtimewebnode.git\ncd realtimewebnode\nnpm install\nnpm start\n```",
   "readmeFilename": "README.md",
   "_id": "chattr@0.1.0",
-  "_from": "chattr@"
+  "_from": "chattr@",
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  }
 }
